@@ -10,8 +10,8 @@ Start a ticket on PivotalTracker and add yourslef as an owner.
 ###To install:
 
 Make sure you have the correct Ruby version(2.3.0)
-```sh
-*$ `git clone https://github.com/LARailsLearners/emojis.git`**
+```
+git clone https://github.com/LARailsLearners/emojis.git
 bundle install
 rails s
 ```
