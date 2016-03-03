@@ -77,3 +77,44 @@ https://github.com/twbs/bootstrap-sass
 ```
 
 --- 
+
+### [Add Authentication](https://www.pivotaltracker.com/story/show/114927207)
+Let's roll our own auth per http://railscasts.com/episodes/250-authentication-from-scratch
+
+---
+
+### [Add RSpec](https://www.pivotaltracker.com/story/show/114927319)
+
+Find more info: https://github.com/rspec/rspec-rails
+1) In Gemfile "group :test" add the following:  
+`gem 'rspec'`
+2) In the terminal:  
+$ `bundle install`
+3) (Initialize the spec/ directory (where specs will reside) In the terminal:  
+$ `rails generate rspec:install`
+4) To run written specs:  
+$ `bundle exec rspec`
+
+---
+
+### [Add Emoji Model](https://www.pivotaltracker.com/story/show/114927259)
+
++ belongs to user
++ no tests required
+
+===
+
+Used `Story` as the Model name as there was a conflict with the word Emoji (either because the app is named emoji or the word is reserved by Rails).
+
++ Generate Model  
+$ `rails g model Emoji emoji:string --no-test-framework`
+
+$ `rake db:migrate`
+
++ Associate User
+**`app/models/story.rb`**
+```
++ belongs_to :user
+```
+
+---
