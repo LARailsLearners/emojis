@@ -47,16 +47,18 @@ RVM gives you compartmentalized independent ruby setups. This means that ruby, g
 
 ---
 
+## Our Tutorial
+
 ### [Add Bootstrap](https://www.pivotaltracker.com/story/show/114927735)
 
 https://rubygems.org/gems/bootstrap-sass  
 https://github.com/twbs/bootstrap-sass
 
-1. Add the bootstrap-sass gem to your `Gemfile`  
++ Add the bootstrap-sass gem to your `Gemfile`  
 `gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'`
-2. $ `bundle`
-3. Rename `application.css` to `application.scss`
-4. Import Bootstrap styles in `app/assets/stylesheets/application.scss`
++ $ `bundle`
++ Rename `application.css` to `application.scss`
++ Import Bootstrap styles in `app/assets/stylesheets/application.scss`
 ```
 /*
 *= require_tree .
@@ -65,7 +67,7 @@ https://github.com/twbs/bootstrap-sass
 @import "bootstrap-sprockets";
 @import "bootstrap";
 ```
-5. Add `//= require bootstrap-sprockets` to `app/assets/javascripts/application.js`
++ Add `//= require bootstrap-sprockets` to `app/assets/javascripts/application.js`
 ```
 //= require jquery
 //= require jquery_ujs
