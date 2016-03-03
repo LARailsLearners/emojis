@@ -1,0 +1,10 @@
+Hello World
+
+<%= link_to "Create User", new_user_path %>
+<ul>
+<% @users.each do |user| %>
+	<li>
+		<%= user.full_name %>
+	</li>
+<% end %>	
+</ul>
