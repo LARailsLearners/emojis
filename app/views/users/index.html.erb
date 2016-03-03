@@ -1,6 +1,15 @@
-Hello World
 
-<%= link_to "Create User", new_user_path %>
+<% if signed_in_user? %>
+  <%= link_to "Logout", session_path, method: :delete %>
+<% else %>
+
+  <%= render partial: 'shared/navbar' %>
+  <p>
+    <%= link_to "Create User", new_user_path %>
+  </p>
+
+<% end %>
+
 <ul>
 <% @users.each do |user| %>
 	<li>

@@ -33,12 +33,6 @@ class ApplicationController < ActionController::Base
       !!current_user
     end
     helper_method :signed_in_user?
-
-    def current_user?
-      params[:user_id] ||= params[:id]
-      params[:user_id] == current_user.id.to_s unless current_user.nil?
-    end
-    helper_method :current_user?
     
     def require_login
       unless signed_in_user?

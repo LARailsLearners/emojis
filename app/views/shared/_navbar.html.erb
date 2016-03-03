@@ -1,0 +1,9 @@
+<%= form_tag session_path, method: :post do %>
+  <%= label_tag "Email" %>
+  <%= text_field_tag :email %>
+  <%= label_tag "Password" %>
+  <%= password_field_tag :password %>
+  <%= submit_tag "Login" %>
+  <%= check_box_tag :remember_me %>
+  <%= label_tag :remember_me, "Remember me?" %>
+<% end %>
