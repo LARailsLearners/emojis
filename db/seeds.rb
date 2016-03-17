@@ -8,13 +8,22 @@
 
 
 ##Create a user
-users = {
-	bill_credentials: {first_name:'bill', last_name:'gates', email:'bill@ms.com', password:'123'},
-	linus_credentials: {first_name:'linus', last_name:'torvalds', email:'linus@init.ram', password:'123'},
-	bob_credentials: {first_name:'bob', last_name:'billy', email:'cake@init.ramfs', password:'123'}
+
+
+25.times do
+	user_creds = {
+		first_name: Faker::Name.first_name, 
+		last_name: Faker::Name.last_name, 
+		email: Faker::Internet.email,
+		password: Faker::Internet.password(8) 
 	}
 
-users.each do |name, user_creds|
 	new_user = User.new(user_creds)
 	new_user.save
 end
+
+# 25.times do
+# 	new_emoji=Emoji.new
+# 	emoji.emoji = Emoji.generate_emoji
+# 	emoji.save
+# end

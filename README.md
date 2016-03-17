@@ -3,7 +3,7 @@
 A collaborative emoji story maker application.
 
 ### Joining the Project
-
+M
 ### Pull Requests, Merging, and PivotalTracker
 Start a ticket on PivotalTracker and add yourslef as an owner.
 
