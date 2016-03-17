@@ -12,6 +12,7 @@ gem 'sqlite3'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'simplecov', :require => false, :group => :test
+gem 'faker'
 
 group :development do
   gem 'web-console', '~> 2.0'

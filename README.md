@@ -3,7 +3,7 @@
 A collaborative emoji story maker application.
 
 ### Joining the Project
-
+M
 ### Pull Requests, Merging, and PivotalTracker
 Start a ticket on PivotalTracker and add yourslef as an owner.
 
@@ -116,5 +116,41 @@ $ `rake db:migrate`
 ```
 + belongs_to :user
 ```
+
+---
+
+
+### [Add Emoji Model](https://www.pivotaltracker.com/story/show/114927259)
+
++ belongs to user
++ no tests required
+
+===
+
+Used `Story` as the Model name as there was a conflict with the word Emoji (either because the app is named emoji or the word is reserved by Rails).
+
++ Generate Model  
+$ `rails g model Emoji emoji:string --no-test-framework`
+
+$ `rake db:migrate`
+
++ Associate User
+**`app/models/story.rb`**
+```
++ belongs_to :user
+```
+
+---### [Add Seed file](https://www.pivotaltracker.com/story/show/115814539)
+
++ Have it generate 25 Users with first_name, last_name, email, password
++ And
++ Have it generate 25 Emojis
+
+===
+
+Used [Faker](https://github.com/stympy/faker) to generate 25 random users in db.
+
++ Seed database  
+$ `rake db:seed`
 
 ---
